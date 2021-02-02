@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/mevo_app/static/css/main.f27b535f.chunk.css",
+    "main.css": "/mevo_app/static/css/main.95cbaad1.chunk.css",
     "main.js": "/mevo_app/static/js/main.56736039.chunk.js",
     "main.js.map": "/mevo_app/static/js/main.56736039.chunk.js.map",
     "runtime-main.js": "/mevo_app/static/js/runtime-main.82ddfade.js",
@@ -10,13 +10,13 @@
     "static/js/3.69ca53b3.chunk.js": "/mevo_app/static/js/3.69ca53b3.chunk.js",
     "static/js/3.69ca53b3.chunk.js.map": "/mevo_app/static/js/3.69ca53b3.chunk.js.map",
     "index.html": "/mevo_app/index.html",
-    "static/css/main.f27b535f.chunk.css.map": "/mevo_app/static/css/main.f27b535f.chunk.css.map",
+    "static/css/main.95cbaad1.chunk.css.map": "/mevo_app/static/css/main.95cbaad1.chunk.css.map",
     "static/js/2.eb4107a2.chunk.js.LICENSE.txt": "/mevo_app/static/js/2.eb4107a2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.82ddfade.js",
     "static/js/2.eb4107a2.chunk.js",
-    "static/css/main.f27b535f.chunk.css",
+    "static/css/main.95cbaad1.chunk.css",
     "static/js/main.56736039.chunk.js"
   ]
 }
