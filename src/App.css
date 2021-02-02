@@ -46,3 +46,6 @@
   width: 33px;
   height: 46px;
 }
+.mapboxgl-ctrl{
+  float :right;
+}
