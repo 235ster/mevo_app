@@ -25,7 +25,7 @@ function App() {
   const vehicleOnButtonClick = (eachVehicle) => {
       selectedVehicle(eachVehicle);
       setLocation(null);
-      // locationAddress(eachVehicle); //Only enable this in production
+      locationAddress(eachVehicle); 
   }
 
 //For measure distance between cordinates
@@ -67,17 +67,16 @@ const onVehiclePopupClose= () => {
   setLocation(null);
 }
 
-//Uncomment the below in production
-
-// const locationAddress = ({longitude, latitude}) => {
-//   Geocoder.init(GOOGLE_API_TOKEN);
-//   Geocoder.from(latitude, longitude)
-//     .then(json => {
-//             var addressComponent = json.results[0].formatted_address;
-//             setLocation(addressComponent);
-//     })
-//     .catch(error => console.warn(error));
-// }
+//Retrieving the location of vehicle using cordinates
+const locationAddress = ({longitude, latitude}) => {
+  Geocoder.init(GOOGLE_API_TOKEN);
+  Geocoder.from(latitude, longitude)
+    .then(json => {
+            var addressComponent = json.results[0].formatted_address;
+            setLocation(addressComponent);
+    })
+    .catch(error => console.warn(error));
+}
 
   useEffect(() => {
     fetch('https://api.mevo.co.nz/public/vehicles/all')
@@ -103,8 +102,8 @@ const onVehiclePopupClose= () => {
             latitude={Number(eachVehicle.latitude)} eachVehicle={eachVehicle} vehicleOnButtonClick={vehicleOnButtonClick} />
         )
       })}
-      
-      {(vehicle) ? <VehiclePopup latitude={Number(vehicle.latitude)} longitude={Number(vehicle.longitude)} onVehiclePopupClose={onVehiclePopupClose} /> : null }
+
+      {(vehicle) ? <VehiclePopup location={location} latitude={Number(vehicle.latitude)} longitude={Number(vehicle.longitude)} onVehiclePopupClose={onVehiclePopupClose} /> : null }
       <NavigationControl/>
       </ReactMapGL>    
     </div> :
