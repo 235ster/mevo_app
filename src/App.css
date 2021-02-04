@@ -42,10 +42,18 @@
   border:none;
 }
 
-.btn-marker img{
-  width: 33px;
-  height: 46px;
-}
 .mapboxgl-ctrl{
   float :right;
 }
+#pageLoading{
+  width: 100vw;
+  height: 100vh;
+}
+
+#imgLoading{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
